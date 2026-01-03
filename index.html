@@ -1,14 +1,17 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L10COMPUTERS | PC Gaming y Consolas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <style>
         /* --- ESTILOS VISUALES --- */
         :root {
-            --primary: #00ff88; /* Verde Neón - Energía Gamer */
-            --accent: #8a2be2;  /* Morado - Toque tech/consolas */
+            --primary: #00ff88; /* Verde Neón */
+            --accent: #8a2be2;  /* Morado */
             --dark: #0f0f0f;
             --dark-gray: #1a1a1a;
             --light: #f5f5f5;
@@ -47,7 +50,7 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: #fff;
             text-transform: uppercase;
@@ -56,8 +59,8 @@
         
         .logo span { color: var(--primary); }
 
-        nav ul { display: flex; gap: 2rem; }
-        nav a { font-weight: 500; transition: 0.3s; }
+        nav ul { display: flex; gap: 1.5rem; }
+        nav a { font-weight: 500; transition: 0.3s; font-size: 0.9rem; }
         nav a:hover { color: var(--primary); }
 
         /* --- HERO --- */
@@ -68,7 +71,6 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            /* Fondo con imagen oscurecida */
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1600&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
@@ -76,165 +78,18 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 1rem;
             text-shadow: 0 0 10px rgba(0,255,136,0.5);
         }
 
         .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; color: #ccc; }
+        .hero p { font-size: 1.1rem; margin-bottom: 2rem; color: #ccc; }
 
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             background-color: var(--primary);
             color: var(--dark);
             font-weight: 900;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            background-color: #fff;
-            box-shadow: 0 0 20px var(--primary);
-            transform: translateY(-3px);
-        }
-
-        /* --- SERVICIOS --- */
-        .services { padding: 6rem 10%; text-align: center; }
-        
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        
-        .subtitle { color: var(--primary); margin-bottom: 4rem; display: block; font-weight: bold;}
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .card {
-            background-color: var(--dark-gray);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border: 1px solid #333;
-            transition: 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 5px;
-            background: var(--primary);
-            transform: scaleX(0);
-            transition: 0.4s;
-            transform-origin: left;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .card:hover::before { transform: scaleX(1); }
-
-        .card h3 { 
-            font-size: 1.5rem; 
-            margin-bottom: 1rem; 
-            color: #fff; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .card p { color: #aaa; font-size: 0.95rem; }
-
-        /* --- CONTACTO --- */
-        .contact {
-            background-color: var(--dark-gray);
-            padding: 5rem 10%;
-            text-align: center;
-            border-top: 1px solid #333;
-        }
-
-        footer {
-            padding: 2rem;
-            text-align: center;
-            background-color: #000;
-            color: #555;
-            font-size: 0.8rem;
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            nav { display: none; } 
-            .services { padding: 4rem 5%; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">L10<span>COMPUTERS</span></div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" id="inicio">
-        <h1>Tu Setup <br><span>Al Máximo Nivel</span></h1>
-        <p>Especialistas en Armado de PC Gamers y Mantenimiento de Consolas.</p>
-        <a href="https://wa.me/523322144477" class="btn">Cotizar Ahora</a>
-    </section>
-
-    <section class="services" id="servicios">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <span class="subtitle">CALIDAD PROFESIONAL PARA TU HARDWARE</span>
-        
-        <div class="services-grid">
-            <div class="card">
-                <h3>🖥️ Armado de PC</h3>
-                <p>Ensamblamos tu computadora gamer a medida, desde gama de entrada hasta High-End. Gestión de cables premium y configuración de BIOS incluida.</p>
-            </div>
             
-            <div class="card">
-                <h3>🎮 Consolas</h3>
-                <p>Mantenimiento preventivo y correctivo para Xbox, PlayStation y Nintendo. Limpieza profunda, cambio de pasta térmica y reducción de ruido.</p>
-            </div>
-            
-            <div class="card">
-                <h3>⚡ Mantenimiento PC</h3>
-                <p>Tu PC como nueva: Limpieza de polvo, cambio de pasta térmica de alta conductividad, formateo, respaldos y optimización de Windows.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contacto">
-        <h2 class="section-title">¿Tu equipo se calienta o hace ruido?</h2>
-        <p>En <strong>L10COMPUTERS</strong> le damos la solución rápida y segura.</p>
-        <br>
-        <a href="https://wa.me/523322144477" class="btn" style="background-color: #25D366; color: white;">Enviar WhatsApp</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 L10COMPUTERS. Potenciando Gamers.</p>
-    </footer>
-
-</body>
-</html>
